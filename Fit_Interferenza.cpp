@@ -98,7 +98,7 @@ void mydata(TString fname = " ")
 void myfit(TString fname = " ", double bkg = BKG, double I0 = I_0, double lambda = LAMBDA, double d = D_PICCOLO, double x0 = X_0, double L = LUNGHEZZA, double D = D_GRANDE)
 {
    TGraphErrors *data = new TGraphErrors(fname, "%lg %lg %lg");
-   TF1 *f1 = (TF1 *)gROOT->GetFunction("myfunc");"Int. luminosa, unit. arb."
+   TF1 *f1 = (TF1 *)gROOT->GetFunction("myfunc");
    f1->SetParameter(0, d);
    f1->SetParameter(1, x0);
    f1->SetParameter(2, L);
